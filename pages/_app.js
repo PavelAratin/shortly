@@ -1,5 +1,6 @@
 import '../styles/main.scss';
 import poppinsFont from '@next/font/local';
+import Layout from '../components/layout/Layout';
 const poppinsLocalFont = poppinsFont({
   src: [
     {
@@ -19,7 +20,9 @@ const poppinsLocalFont = poppinsFont({
 export default function App({ Component, pageProps }) {
   return (
     <main className={poppinsLocalFont.className}>
-      <Component {...pageProps} />
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
     </main>
   )
 }
