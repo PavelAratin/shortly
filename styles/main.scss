@@ -9,11 +9,13 @@
 *{
   box-sizing: border-box;
 }
+html {
+  margin-right: calc(-1 * (100vw - 100%));
+}
 body{
   margin: 0;
   color: $colorVeryDarkViolet;
   background-color: #EFF1F7;
-  padding: 0 calc(20px - (100vw - 100%)) 0 0;
 }
 main{
   display: flex;
