@@ -1,0 +1,29 @@
+@import 'variable.scss';
+.hero{
+  padding: 150px 0 250px 0;
+  background-image: url('../public/images/illustration-working.svg');
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: 733px 482px;
+  background-color: #ffffff;
+  &__title{
+    font-size: 64px;
+    color: $colorVeryDarkViolet;
+    max-width: 500px;
+    margin-bottom: 10px;
+  }
+  &__description{
+    color: $colorGrayishViolet;
+    max-width: 400px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+  }
+  &__button{
+    background-color: $colorCyan;
+    color: #ffffff;
+    transition: opacity 0.2s linear;
+    &:hover{
+      opacity: 0.5;
+    }
+  }
+}

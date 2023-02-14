@@ -1,5 +1,25 @@
-import '../styles/globals.css'
-
+import '../styles/main.scss';
+import poppinsFont from '@next/font/local';
+const poppinsLocalFont = poppinsFont({
+  src: [
+    {
+      path: '../public/fonts/Poppins-Regular.woff2',
+      weight: '400',
+      style: 'normal',
+      display: 'swap',
+    },
+    {
+      path: '../public/fonts/Poppins-Bold.woff2',
+      weight: '700',
+      style: 'normal',
+      display: 'swap'
+    },
+  ],
+})
 export default function App({ Component, pageProps }) {
-  return <Component {...pageProps} />
+  return (
+    <main className={poppinsLocalFont.className}>
+      <Component {...pageProps} />
+    </main>
+  )
 }

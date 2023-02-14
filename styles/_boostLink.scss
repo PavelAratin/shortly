@@ -1,0 +1,20 @@
+@import 'variable.scss';
+.boost-link{
+  padding: 50px 0;
+  background: center top / cover $colorDarkViolet no-repeat url('../public/images/bg-shorten-desktop.svg');
+  &__title{
+    color: #ffffff;
+    text-align: center;
+    font-size: 44px;
+    margin-bottom: 30px;
+  }
+  &__button{
+    background-color: $colorCyan;
+    color: #ffffff;
+    margin: 0 auto;
+    transition: opacity 0.2s linear;
+    &:hover{
+      opacity: 0.8;
+    }
+  }
+}

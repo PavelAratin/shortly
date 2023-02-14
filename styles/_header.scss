@@ -1,0 +1,35 @@
+@import 'variable.scss';
+.header{
+  padding: 30px 0;
+  background-color: #ffffff;
+  &__container{
+    display: flex;
+    align-items: center;
+  }
+  .nav__list{
+    display: flex;
+    align-items: center;
+  }
+  .nav__item:not(:last-child){
+    margin-right: 20px;
+  }
+  .nav__link{
+    color: $colorGrayishViolet;
+    transition: color 0.2s linear;
+    &:hover{
+      color: $colorVeryDarkViolet;
+    }
+  }
+}
+
+.header-actions-list{
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  &__item:not(:last-child){
+    margin-right: 20px;
+  }
+}
+.logo{
+  margin-right: 40px;
+}

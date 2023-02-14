@@ -1,0 +1,56 @@
+@import 'normalize.scss';
+@import 'variable.scss';
+@import 'header.scss';
+@import 'hero.scss';
+@import 'shortLinkService.scss';
+@import 'advancedStatics.scss';
+@import 'boostLink.scss';
+@import 'footer.scss';
+*{
+  box-sizing: border-box;
+}
+body{
+  margin: 0;
+  color: $colorVeryDarkViolet;
+  background-color: #EFF1F7;
+}
+h1,h2,h3,h4,h5,h6{
+  margin: 0;
+}
+p{
+  margin: 0;
+  padding: 0;
+}
+button{
+  padding: 0;
+}
+ul{
+  margin: 0;
+  padding: 0;
+}
+li{
+  list-style-type: none;
+}
+a{
+  text-decoration: none;
+  color: inherit;
+}
+.container{
+  max-width: 1480px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+button{
+  display: block;
+  padding: 8px 13px;
+  color: $colorGrayishViolet;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  transition: background 0.2s linear,color 0.2s linear;
+  &:hover{
+    background-color: $colorCyan;
+    color: #ffffff;
+  }
+}

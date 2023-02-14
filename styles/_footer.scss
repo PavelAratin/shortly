@@ -1,0 +1,12 @@
+@import 'variable.scss';
+.footer{
+  background-color: $colorVeryDarkViolet;
+  padding: 50px 0;
+  &__container{
+    display: flex;
+    justify-content: center;
+  }
+  &__logo{
+    display: block;
+  }
+}
