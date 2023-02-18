@@ -1,6 +1,8 @@
 import '../styles/main.scss';
 import poppinsFont from '@next/font/local';
 import Layout from '../components/layout/Layout';
+import { Provider } from 'react-redux';
+import { store } from './store/store';
 const poppinsLocalFont = poppinsFont({
   src: [
     {
@@ -20,9 +22,11 @@ const poppinsLocalFont = poppinsFont({
 export default function App({ Component, pageProps }) {
   return (
     <main className={poppinsLocalFont.className}>
+      <Provider store={store}>
         <Layout>
           <Component {...pageProps} />
         </Layout>
+      </Provider>
     </main>
   )
 }

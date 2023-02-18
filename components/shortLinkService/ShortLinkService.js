@@ -1,9 +1,10 @@
 import { useState } from "react";
+import { useSelector } from "react-redux";
 const ShortLinkSrvice = () => {
+  const userRegisterState = useSelector((state) => state.userRegistered)
   const [inputValue, setInputValue] = useState('');
   const [inputValidate, setInputvalidate] = useState(false);
   const [buttonDisabled, setButtonDisabled] = useState(true);
-  const [needLogin, setNeedLogin] = useState(true);
   const inputChangeHandler = (e) => {
     setInputValue(e.target.value)
     if (inputValue !== '') {
@@ -37,9 +38,9 @@ const ShortLinkSrvice = () => {
             className="button form__button"
             disabled={buttonDisabled}
           > Shorten it!</button>
-          {needLogin ? <div className="form-inaccessible">
+          {userRegisterState ? '' : <div className="form-inaccessible">
             <p className="form-inaccessible__text">Need Login</p>
-          </div> : ''}
+          </div>}
         </form>
         {/* <ul className="short-link-service__list">
           <li className="short-link-service__item">

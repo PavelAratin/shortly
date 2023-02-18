@@ -1,10 +1,13 @@
 import { useState } from "react";
+import { useDispatch } from "react-redux";
+import { userRegisteredActions } from "../../pages/store/store";
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
 const ActionForm = ({ overlayFormToggleDisplay, buttonLoginText, setOverlayFormDisplayIs }) => {
   const [inputEmailValue, setInputEmailValue] = useState('');
   const [inputPasswordValue, setInputPasswordValue] = useState('');
   const [userNotFound, setUserNotFound] = useState(false);
   const [successfulRegistration, setSuccessfulRegistration] = useState(false);
+  const userRegisteredDispatch = useDispatch();
   
   const formCloseHandler = () => {
     overlayFormToggleDisplay()
@@ -35,6 +38,7 @@ const ActionForm = ({ overlayFormToggleDisplay, buttonLoginText, setOverlayFormD
         .then((data) => {
           setOverlayFormDisplayIs((previousState) => !previousState)
           setUserNotFound((previousState) => !previousState)
+          userRegisteredDispatch(userRegisteredActions(true))
         })
         .catch((error) => {
           setUserNotFound((previousState) => !previousState)
