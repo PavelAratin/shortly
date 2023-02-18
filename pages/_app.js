@@ -20,9 +20,9 @@ const poppinsLocalFont = poppinsFont({
 export default function App({ Component, pageProps }) {
   return (
     <main className={poppinsLocalFont.className}>
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
     </main>
   )
 }

@@ -6,9 +6,10 @@ import Header from "../header/Header";
 
 const Layout = ({ children }) => {
   const [overlayFormDisplayIs, setOverlayFormDisplayIs] = useState(false)
-  const overlayFormToggleDisplay = () => {
-    console.log('overlayFormToggleDisplay')
+  const [buttonLoginText, setButtonLoginText] = useState();
+  const overlayFormToggleDisplay = (buttonLoginText) => {
     setOverlayFormDisplayIs((previousState) => !previousState)
+    setButtonLoginText(buttonLoginText)
   }
   return (
     <React.Fragment>
@@ -16,7 +17,11 @@ const Layout = ({ children }) => {
       {children}
       <Footer></Footer>
       {overlayFormDisplayIs && <FormOverlay>
-        <ActionForm overlayFormToggleDisplay={overlayFormToggleDisplay}></ActionForm>
+        <ActionForm
+          overlayFormToggleDisplay={overlayFormToggleDisplay}
+          buttonLoginText={buttonLoginText}
+          setOverlayFormDisplayIs={setOverlayFormDisplayIs}
+        ></ActionForm>
       </FormOverlay>}
     </React.Fragment>
   )

@@ -1,9 +1,12 @@
 import React from "react";
 import Link from "next/link";
 
-const Header = ({overlayFormToggleDisplay}) => {
-  const signUpHandler =()=>{
-    overlayFormToggleDisplay()
+const Header = ({ overlayFormToggleDisplay }) => {
+  const signUpHandler = () => {
+    overlayFormToggleDisplay('Sign Up')
+  }
+  const loginHandler = () => {
+    overlayFormToggleDisplay('Login')
   }
   return (
     <React.Fragment>
@@ -27,7 +30,10 @@ const Header = ({overlayFormToggleDisplay}) => {
           </nav>
           <ul className="header-actions-list">
             <li className="header-actions-list__item">
-              <button className="header-actions-list__button button">Login</button>
+              <button
+                className="header-actions-list__button button"
+                onClick={loginHandler}
+              >Login</button>
             </li>
             <li className="header-actions-list__item">
               <button

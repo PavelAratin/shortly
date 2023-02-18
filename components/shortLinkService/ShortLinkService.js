@@ -1,8 +1,9 @@
 import { useState } from "react";
 const ShortLinkSrvice = () => {
-  const [inputValue, setInputValue] = useState('')
-  const [inputValidate, setInputvalidate] = useState(false)
-  const [buttonDisabled, setButtonDisabled] = useState(true)
+  const [inputValue, setInputValue] = useState('');
+  const [inputValidate, setInputvalidate] = useState(false);
+  const [buttonDisabled, setButtonDisabled] = useState(true);
+  const [needLogin, setNeedLogin] = useState(true);
   const inputChangeHandler = (e) => {
     setInputValue(e.target.value)
     if (inputValue !== '') {
@@ -12,11 +13,8 @@ const ShortLinkSrvice = () => {
   const submitFormHandler = (e) => {
     e.preventDefault()
     if (inputValue !== '' && inputValue.includes('https:/')) {
-      console.log("форма отправлена", inputValue);
       setInputvalidate(false)
     } else {
-      // setInputvalidate(previousState => !previousState)
-      console.log("форма не отправлена");
       setInputvalidate(true)
     }
   }
@@ -39,14 +37,17 @@ const ShortLinkSrvice = () => {
             className="button form__button"
             disabled={buttonDisabled}
           > Shorten it!</button>
+          {needLogin ? <div className="form-inaccessible">
+            <p className="form-inaccessible__text">Need Login</p>
+          </div> : ''}
         </form>
-        <ul className="short-link-service__list">
+        {/* <ul className="short-link-service__list">
           <li className="short-link-service__item">
             <span className="short-link-service__longlink">https:/www.frontendmentor.io</span>
             <span className="short-link-service__shortlink">https://rel.link/k4iKyk</span>
             <button className="button short-link-service__button">Copy</button>
           </li>
-        </ul>
+        </ul> */}
       </div>
     </section>
   )
