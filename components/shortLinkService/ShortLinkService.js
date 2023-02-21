@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
-import { addShortLinkActions, deleteShortLinkActions } from "../../pages/store/store";
+import { addShortLinkActions, deleteShortLinkActions } from "../../store/store";
 import { useDispatch } from "react-redux";
 import { useClipboard } from 'use-clipboard-copy';
 const ShortLinkSrvice = () => {

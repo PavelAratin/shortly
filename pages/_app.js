@@ -2,7 +2,7 @@ import '../styles/main.scss';
 import poppinsFont from '@next/font/local';
 import Layout from '../components/layout/Layout';
 import { Provider } from 'react-redux';
-import { store } from './store/store';
+import { store } from '../store/store';
 const poppinsLocalFont = poppinsFont({
   src: [
     {

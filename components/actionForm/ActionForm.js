@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import { userRegisteredActions } from "../../pages/store/store";
+import { userRegisteredActions } from "../../store/store";
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
 const ActionForm = ({ overlayFormToggleDisplay, buttonLoginText, setOverlayFormDisplayIs }) => {
   const [inputEmailValue, setInputEmailValue] = useState('');
