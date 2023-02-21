@@ -1,0 +1,35 @@
+@import 'variable.scss';
+.mobile-menu{
+  background-color: $colorDarkViolet;
+  padding: 20px;
+  margin: 0 20px;
+  border-radius: 10px;
+  .nav,
+  .header-actions-list{
+    display: block;
+  }
+  .nav{
+    padding: 20px 0;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ffffff;
+    &__item{
+      display: flex;
+      justify-content: center;
+      &:not(:last-child){
+        margin-bottom: 10px;
+      }
+    }
+    &__link{
+      color: #ffffff;
+    }
+  }
+  .header-actions-list__item:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+  .header-actions-list__button{
+    width: 100%;
+    background-color: $colorCyan;
+    color: #ffffff;
+  } 
+}

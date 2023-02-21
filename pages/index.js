@@ -11,14 +11,14 @@ export default function Home() {
   const app = initFirebase();
   return (
     <React.Fragment>
-        <Head>
-          <title>Сервис для создания коротких ссылок</title>
-          <link rel="icon" href="./favicon-link.png" />
-        </Head>
-        <Hero></Hero>
-        <ShortLinkSrvice></ShortLinkSrvice>
-        <AdvancedStatics></AdvancedStatics>
-        <BoostLinks></BoostLinks>
+      <Head>
+        <title>Сервис для создания коротких ссылок</title>
+        <link rel="icon" href="./favicon-link.png" />
+      </Head>
+      <Hero></Hero>
+      <ShortLinkSrvice></ShortLinkSrvice>
+      <AdvancedStatics></AdvancedStatics>
+      <BoostLinks></BoostLinks>
     </React.Fragment>
   )
 }
