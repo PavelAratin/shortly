@@ -1,5 +1,4 @@
 import { createStore } from 'redux';
-import { composeWithDevTools } from 'redux-devtools-extension';
 
 const reducer = (state = { userRegistered: false, shortLinks: [] }, action) => {
   if (action.type === "USER_REGISTERED") {
@@ -23,7 +22,7 @@ const reducer = (state = { userRegistered: false, shortLinks: [] }, action) => {
   return state;
 }
 
-export const store = createStore(reducer, composeWithDevTools());
+export const store = createStore(reducer);
 
 export const userRegisteredActions = (userRegistered) => {
   return {
