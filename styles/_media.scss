@@ -72,6 +72,28 @@
   .header-actions-list{
     display: none;
   }
+  .short-link-service__item{
+    flex-direction: column;
+  }
+  .short-link-service__shortlink{
+    margin: 0;
+    width: 100%;
+    text-align: center;
+    padding-bottom: 10px;
+    padding-top: 10px;
+  }
+  .short-link-service__longlink{
+    border-bottom: 1px solid black;
+    width: 100%;
+    padding-bottom: 10px;
+    text-align: center;
+  }
+  .short-link-service__button:not(:last-child){
+    margin: 0 0 10px 0;
+  }
+  .short-link-service__button{
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 400px){
